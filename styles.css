@@ -25,6 +25,16 @@ code {
 		z-index: 0;
 	}
 
+	body::before {
+		width: 100%;
+		content: '';
+		inset: 0;
+		z-index: -1;
+		position: fixed;
+		background-image: linear-gradient(to bottom left, rgb(83, 50, 0), rgb(93, 90, 0), rgb(103, 120, 0), rgb(113, 170, 0));
+		opacity: 0.95;
+	}
+
 	body::after {
 		width: 100%;
 		content: '';
@@ -194,6 +204,14 @@ code {
 		opacity: 0.7;
 	}
 
+	.link {
+		color: goldenrod;
+	}
+
+	.link:focus {
+		color: darkred;
+	}
+
 }
 
 @media all and (min-width: 960px) {
@@ -203,15 +221,7 @@ code {
 		justify-content: right;
 	}
 
-	body::before {
-		width: 100%;
-		content: '';
-		inset: 0;
-		z-index: -1;
-		position: fixed;
-		background-image: linear-gradient(to bottom left, rgb(83, 50, 0), rgb(93, 90, 0), rgb(103, 120, 0), rgb(113, 170, 0));
-		opacity: 0.95;
-	}
+	
 
 	.para::selection, li::selection, h1::selection, h2::selection, h3::selection, a::selection {
 		background-color: rgb(83, 63, 11) !important;
@@ -315,6 +325,12 @@ code {
 		margin-bottom: 0.75rem;
 	}
 
+	.link {
+		transition: all 0.2s linear;
+	}
 
+	.link:hover {
+		color: gold;
+	}
 
 }
